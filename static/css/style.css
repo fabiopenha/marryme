@@ -1,0 +1,23 @@
+.about-area{
+    background-color: #f7dede;
+}
+
+footer{
+    padding: 0;
+}
+
+.botao{
+    background-color: #f9f9f9;
+}
+
+@media(min-width:320px) {
+    .btn-main{
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .dropdown{
+        padding: 0px;
+        right: 40px;
+    }
+}
