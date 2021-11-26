@@ -8,7 +8,7 @@ from apps.services.models import Services
 class ServicesCreate(LoginRequiredMixin, CreateView):
     login_url = reverse_lazy('login')
     model = Services
-    fields = ['service_titulo','service_descricao', 'data_public', 'service_imagem', 'ativo']
+    fields = ['service_titulo','service_descricao', 'data_public','categoria', 'service_imagem', 'ativo']
     template_name = 'services/services_create.html'
     success_url = reverse_lazy('home')
 
@@ -50,6 +50,6 @@ class ServicesDetail(DetailView):
 class ServicesEdit(LoginRequiredMixin, UpdateView):
     login_url = reverse_lazy('login')
     model = Services
-    fields = ['service_titulo', 'service_descricao', 'data_public', 'service_imagem', 'ativo']
+    fields = ['service_titulo', 'service_descricao', 'data_public','categoria', 'service_imagem', 'ativo']
     template_name = 'services/services_create.html'
     success_url = reverse_lazy('services_list')

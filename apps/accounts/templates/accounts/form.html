@@ -29,7 +29,9 @@
 			<fieldset>
 				<legend>User Registration</legend>
 				<div class="form-group">
-					{{ form.as_p }}
+					{% for fm in form %}
+					<p>{{ fm.label_tag }} {{ fm }} <br><span class="text-danger">{{ fm.errors|striptags }}</span></p>
+					{% endfor %}
 				</div>
 
 				<div class="d-flex justify-content-between align-items-center">

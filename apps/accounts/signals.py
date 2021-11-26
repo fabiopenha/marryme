@@ -11,3 +11,4 @@ def create_usuario(sender, instance, created, **kwargs):
     else:
         if not hasattr(instance,"usuario"):
             Usuario.objects.create(usuario=instance)
+    instance.usuario.save()

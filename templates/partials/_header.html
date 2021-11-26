@@ -30,6 +30,8 @@
                             <div class="dropdown-menu m5-3">
                                 <a class="dropdown-item" href="{% url 'perfil_edit' %}">Perfil</a>
                                 <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'password_change' %}">Segurança</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{% url 'services_create' request.user.id %}">Anunciar</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{% url 'logout' %}">Sair</a>
