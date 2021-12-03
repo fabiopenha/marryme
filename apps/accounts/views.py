@@ -25,7 +25,8 @@ class UserCreate(CreateView):
     success_url = reverse_lazy('home')
 
     def post(self, request, *args, **kwargs):
-        form = self.get_form()
+        self.object = self.get_form()
+        form = self.object
 
         if form.is_valid():
             user = form.save(commit=False)
