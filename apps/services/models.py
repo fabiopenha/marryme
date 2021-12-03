@@ -12,3 +12,7 @@ class Services(models.Model):
     data_public = models.DateTimeField(default=timezone.now, verbose_name='Data da Publicação')
     service_imagem = models.ImageField(upload_to='imagens/%Y/%m/%d',default='default.png', blank=True, null=True, verbose_name='Imagem')
     ativo = models.BooleanField(default=True)
+
+
+    class Meta:
+        verbose_name_plural = 'Services'
